@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Selection</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: #141414;
+            color: #e50914;
+        }
+
+        .title {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .subtitle {
+            font-size: 24px;
+            color: #ff5733;
+            margin-bottom: 30px;
+        }
+
+        .profiles-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .profile-card {
+            width: 150px;
+            height: 180px;
+            cursor: pointer;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            color: #4caf50;
+        }
+
+        .profile-card:hover {
+            transform: scale(1.1);
+        }
+
+        .profile-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .profile-name {
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="title">The Last Dance</div>
+    <div class="subtitle">Who's Reading</div>
+    <div class="profiles-container">
+        <!-- Profile cards with links to the given page -->
+        <div class="profile-card" onclick="window.location.href='https://karaoud-maker.github.io/the-last-dance/'">
+            <img src="https://i.postimg.cc/YC67LD1j/Screenshot-20241112-101452-Facebook.jpg" alt="Doua">
+            <div class="profile-name">Doua</div>
+        </div>
+        <div class="profile-card" onclick="window.location.href='https://karaoud-maker.github.io/the-last-dance/'">
+            <img src="https://i.postimg.cc/65Gttpqr/Screenshot-20241112-101507-Facebook.jpg" alt="Hamdi">
+            <div class="profile-name">Hamdi</div>
+        </div>
+        <div class="profile-card" onclick="window.location.href='https://karaoud-maker.github.io/the-last-dance/'">
+            <img src="https://i.postimg.cc/fLTMN7Sy/Screenshot-20241112-101715-Facebook.jpg" alt="Sarah">
+            <div class="profile-name">Sarah</div>
+        </div>
+        <div class="profile-card" onclick="window.location.href='https://karaoud-maker.github.io/the-last-dance/'">
+            <img src="https://i.postimg.cc/cCvZKsmN/Screenshot-20241112-101754-Facebook.jpg" alt="Lhif">
+            <div class="profile-name">Lhif</div>
+        </div>
+        <div class="profile-card" onclick="window.location.href='https://karaoud-maker.github.io/the-last-dance/'">
+            <img src="https://i.postimg.cc/D0RhLtj4/Screenshot-20241112-101807-Facebook.jpg" alt="Yahya">
+            <div class="profile-name">Yahya</div>
+        </div>
+        <div class="profile-card" onclick="window.location.href='https://karaoud-maker.github.io/the-last-dance/'">
+            <img src="https://i.postimg.cc/2ShkFSfk/Screenshot-20241112-101815-Facebook.jpg" alt="Zeineb">
+            <div class="profile-name">Zeineb</div>
+        </div>
+    </div>
+</body>
+</html>
