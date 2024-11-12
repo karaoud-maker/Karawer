@@ -1,0 +1,8 @@
+/* Profile card hover effect */
+.profile-card {
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-card:hover {
+    transform: scale(1.1); /* Enlarge profile card on hover */
+}
