@@ -6,71 +6,68 @@
     <title>Profile Selection</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
     <style>
-        /* Fullscreen video styling */
-        #video-intro {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background-color: black;
-            z-index: 1000;
+        /* Animation styles */
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 2s forwards;
         }
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
+        .fade-in-delay {
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+            animation-delay: 0.5s;
+        }
+        .profile-card {
+            opacity: 0;
+            transform: scale(0.9);
+            animation: fadeInUp 0.8s forwards;
+        }
+        .profile-card:nth-child(1) { animation-delay: 0.6s; }
+        .profile-card:nth-child(2) { animation-delay: 0.8s; }
+        .profile-card:nth-child(3) { animation-delay: 1s; }
+        .profile-card:nth-child(4) { animation-delay: 1.2s; }
+        .profile-card:nth-child(5) { animation-delay: 1.4s; }
+        .profile-card:nth-child(6) { animation-delay: 1.6s; }
+
+        /* Keyframes for animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px) scale(0.9); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
         }
     </style>
 </head>
 <body>
-    <!-- Video Intro Section -->
-    <div id="video-intro">
-        <iframe id="intro-video" src="https://www.youtube.com/embed/IKhxRdN2UkQ?autoplay=1&mute=1&controls=0&modestbranding=1&showinfo=0" allow="autoplay" allowfullscreen></iframe>
-    </div>
-
-    <!-- Content to show after video -->
-    <div id="content" style="display: none;">
-        <div class="title">The Last Dance</div>
-        <div class="subtitle">Who's Reading</div>
-        <div class="profiles-container">
-            <div class="profile-card" onclick="window.location.href='https://karaoud-maker.github.io/the-last-dance/'">
-                <img src="https://i.postimg.cc/YC67LD1j/Screenshot-20241112-101452-Facebook.jpg" alt="Doua">
-                <div class="profile-name">Doua</div>
-            </div>
-            <div class="profile-card" onclick="window.location.href='https://karaoud-maker.github.io/the-last-dance/'">
-                <img src="https://i.postimg.cc/65Gttpqr/Screenshot-20241112-101507-Facebook.jpg" alt="Hamdi">
-                <div class="profile-name">Hamdi</div>
-            </div>
-            <div class="profile-card" onclick="window.location.href='https://karaoud-maker.github.io/the-last-dance/'">
-                <img src="https://i.postimg.cc/fLTMN7Sy/Screenshot-20241112-101715-Facebook.jpg" alt="Sarah">
-                <div class="profile-name">Sarah</div>
-            </div>
-            <div class="profile-card" onclick="window.location.href='https://karaoud-maker.github.io/the-last-dance/'">
-                <img src="https://i.postimg.cc/cCvZKsmN/Screenshot-20241112-101754-Facebook.jpg" alt="Lhif">
-                <div class="profile-name">Lhif</div>
-            </div>
-            <div class="profile-card" onclick="window.location.href='https://karaoud-maker.github.io/the-last-dance/'">
-                <img src="https://i.postimg.cc/D0RhLtj4/Screenshot-20241112-101807-Facebook.jpg" alt="Yahya">
-                <div class="profile-name">Yahya</div>
-            </div>
-            <div class="profile-card" onclick="window.location.href='https://karaoud-maker.github.io/the-last-dance/'">
-                <img src="https://i.postimg.cc/2ShkFSfk/Screenshot-20241112-101815-Facebook.jpg" alt="Zeineb">
-                <div class="profile-name">Zeineb</div>
-            </div>
+    <div class="title fade-in">The Last Dance</div>
+    <div class="subtitle fade-in-delay">Who's Reading</div>
+    <div class="profiles-container">
+        <!-- Profile cards with links to the given page -->
+        <div class="profile-card" onclick="window.location.href='https://karaoud-maker.github.io/the-last-dance/'">
+            <img src="https://i.postimg.cc/YC67LD1j/Screenshot-20241112-101452-Facebook.jpg" alt="Doua">
+            <div class="profile-name">Doua</div>
+        </div>
+        <div class="profile-card" onclick="window.location.href='https://karaoud-maker.github.io/the-last-dance/'">
+            <img src="https://i.postimg.cc/65Gttpqr/Screenshot-20241112-101507-Facebook.jpg" alt="Hamdi">
+            <div class="profile-name">Hamdi</div>
+        </div>
+        <div class="profile-card" onclick="window.location.href='https://karaoud-maker.github.io/the-last-dance/'">
+            <img src="https://i.postimg.cc/fLTMN7Sy/Screenshot-20241112-101715-Facebook.jpg" alt="Sarah">
+            <div class="profile-name">Sarah</div>
+        </div>
+        <div class="profile-card" onclick="window.location.href='https://karaoud-maker.github.io/the-last-dance/'">
+            <img src="https://i.postimg.cc/cCvZKsmN/Screenshot-20241112-101754-Facebook.jpg" alt="Lhif">
+            <div class="profile-name">Lhif</div>
+        </div>
+        <div class="profile-card" onclick="window.location.href='https://karaoud-maker.github.io/the-last-dance/'">
+            <img src="https://i.postimg.cc/D0RhLtj4/Screenshot-20241112-101807-Facebook.jpg" alt="Yahya">
+            <div class="profile-name">Yahya</div>
+        </div>
+        <div class="profile-card" onclick="window.location.href='https://karaoud-maker.github.io/the-last-dance/'">
+            <img src="https://i.postimg.cc/2ShkFSfk/Screenshot-20241112-101815-Facebook.jpg" alt="Zeineb">
+            <div class="profile-name">Zeineb</div>
         </div>
     </div>
-
-    <script>
-        // Hide the video intro and show the main content after a set time
-        const videoIntro = document.getElementById('video-intro');
-        const content = document.getElementById('content');
-
-        // Set a timeout to hide the video after the approximate video length (replace with actual duration if known)
-        setTimeout(() => {
-            videoIntro.style.display = 'none';
-            content.style.display = 'block';
-        }, 15000); // 15 seconds as an example
-    </script>
 </body>
 </html>
